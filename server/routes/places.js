@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post('/getList', async (req, res) => {
     console.log(req.body);
-    const apiKey = 'AIzaSyBWCUCtkScDdeR8-n7onaU0-GSVz7Fgv1A';
+    
     const { lat, lng } = req.body;
     const response = await fetch('https://places.googleapis.com/v1/places:searchText', {
         method: 'POST',
